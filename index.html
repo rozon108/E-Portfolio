@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rojan</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f95c23eae3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    Hello world
+
     <section id="landing-page">
         <!-- navigation-bar -->
         <nav>
             <figure>
-                <img>
+                <img id="personal-logo" src="./assets/logo.svg">
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
@@ -23,26 +24,59 @@
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">
-                    About</a>
+                        About</a>
                 </li>
                 <li class="nav__link">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">
-                    Projects</a>
+                        Projects</a>
                 </li>
                 <li class="nav__link">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">
-                    Contact</a>
+                        Contact</a>
+                </li>
+                <li class="nav__link click">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black ">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </a>
                 </li>
             </ul>
-
-
         </nav>
+        <!-- end of navigation-bar -->
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title impHighlight">I'm Rojan. </h1>
+                <p class="header__para">I m <b class="impHighlight">Software Engineer</b> with strong passion for
+                    building web applicaitons with great user
+                    experience
+                    <br>
+                    Here is a bit <b class="impHighlight">about me</b> :
+                </p>
+                <div class="social-list">
+                    <a href="#" target="_blank" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social__link click"><i class="fa-brands fa-github"></i></a>  
+                    <a href="#" class="social__link click"><i class="fa-solid fa-file-lines"></i></a>                 
+                </div>
+            </div>
+        </header>
+        <button class="mail_btn click">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+
+
+
     </section>
 </body>
 

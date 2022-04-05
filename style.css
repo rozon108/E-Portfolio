@@ -1,3 +1,207 @@
+/* import link generated from 'Goolge Fonts' */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap');
+
+
 * {
-    color: red
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+
 }
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+section{
+    background-color: #f5f3f3;
+}
+
+.title{
+    font-size: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+
+.impHighlight{
+    color: red !important; 
+}
+
+
+/* Hover Effect
+    when mouse is around icon its size increases, decreases when clicked
+*/
+.click{
+    transition: 300ms ease;
+}
+
+.click:hover{
+    transform: scale(1.35);
+}
+
+.click:active{
+    transform: scale(0.95);
+    background-color: aqua;
+}
+/* End of Hover Effect */
+
+.mail_btn{
+ width: 80px;
+ height: 80px;
+ font-size: 35px;
+ border-radius: 40%;
+ border: none;
+ background-color: black;
+ color: white;
+ position: absolute;
+ bottom: 40px;
+ right: 30px;
+ padding: 0 3px 5px 0;
+}
+
+
+
+
+
+
+/* 
+  Landing Page 
+*/
+
+#landing-page{
+    min-height: 100vh;
+}
+
+.header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+.header__para{
+    font-size: 26px;
+    line-height: 2  ;
+    max-width: 450px;
+}
+
+.social-list{
+    margin-top: 16px;
+    display: flex;
+}
+
+.social__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    background-color: rgba(255, 0, 0, 0.856);
+    color: white;
+    
+    padding: 6px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+/* 
+    NAVIGATION BAR 
+*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100px;
+
+}
+
+#personal-logo{
+    filter: invert(1);
+    width: 50px;
+    height: 50px; 
+}
+
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link{
+    margin: 0 12px;
+}
+.nav__link--anchor{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+}
+
+/* Light/Dark Mode */
+.fa-circle-half-stroke{
+    font-size: 20px;
+    color: black;
+}
+
+/* Scroll Button Animation  */
+.scroll{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.scroll__icon{
+    width:20px;
+    height: 35px;
+    border: 2.25px solid black;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll__icon::after{
+    content: "";
+    background-color: black;
+    width: 5px;
+    height: 7px;
+    border-radius: 100%;
+    animation: scroll_Icon 1000ms infinite alternate-reverse;
+
+}
+
+@keyframes scroll_Icon {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
+
+
