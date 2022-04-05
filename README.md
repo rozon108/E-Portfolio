@@ -5,7 +5,7 @@
 <h2>Landing Page</h2>
   Finsihed creating model for landing page.
   Features:
-    
+  
     Navigation Bar
     Social Icons and links with Hover effect(Changes size when hovered and clicked)
     removed text decoration for anchor"<a>" (no underline)
@@ -21,8 +21,16 @@
     ~other animation feature 
     ~more ....
   
+ <h2>Projects Page</h2>
+  ToDo:
   
-  
-  
-
-
+    Create kind of Containers showing Projects
+    Image with title, languages used, short descirption
+    Hover Effect: Blur image, grayish background colour with texts, links to project, repo ... 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
