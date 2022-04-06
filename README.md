@@ -15,11 +15,6 @@
     min-height: 100vh (to display .this element, vh-> viewport height, similarly their is vw, viewport width
     
     
-  Still to do:
-  
-    ~Pop-up window when we click Email-button(to send message)
-    ~other animation feature 
-    ~more ....
   
  <h2>Projects Page</h2>
   ToDo:
@@ -40,6 +35,15 @@
  
  
  
+ 
+ 
+ 
+ Still to do:
+  
+    ~Integrate EmailJS
+    ~other animation feature 
+    ~more ....
+  
  
  
  
