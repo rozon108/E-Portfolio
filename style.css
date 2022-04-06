@@ -38,11 +38,14 @@ section{
     color: red !important; 
 }
 
+button{
+    cursor: pointer;
+}
+/*      HOVER EFFECTS     */
 
-/* Hover Effect
-    when mouse is around icon its size increases, decreases when clicked
-*/
+    /*  when mouse is around icon its size increases, decreases when clicked  */
 .click{
+    cursor: pointer;
     transition: 300ms ease;
 }
 
@@ -52,9 +55,38 @@ section{
 
 .click:active{
     transform: scale(0.95);
-    background-color: aqua;
+    
 }
-/* End of Hover Effect */
+
+    /* Little Line under Text when hovering with bit of animation */
+.link__hover-effect{
+    position: relative;
+}
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    right: 0px;
+    width: 00%;
+    transition: all 500ms ease;
+}
+
+.link__hover-effect:hover:after{
+    width: 100%;
+    left: 0;
+
+}
+.link__hover-effect--black:after{
+    background-color: black;
+}
+.link__hover-effect--white:after{
+    background-color: white;
+}
+    /* End of underline animation */
+
+
+/* -- End of Hover Effect -- */
 
 .mail_btn{
  width: 80px;
@@ -69,6 +101,199 @@ section{
  right: 30px;
  padding: 0 3px 5px 0;
 }
+
+.container{
+    padding: 50px 0;
+}
+
+.row{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+
+/* MODAL POP-UP */
+.modal{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 0px;
+    width: 90%;
+    max-width: 1200px;
+    height: 650px;
+
+    display: flex;
+    box-shadow: 0px 0px 200px 100px rgb(0, 0, 0);
+    border-radius: 24px;
+    overflow: hidden;
+}
+.modal_half{
+    width: 050%;
+    padding: 40px 60px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+.modal-aboutMe{
+    background-color: white;  
+}
+.modal-contact{
+    background-color: red;
+    color: white;
+}
+
+
+.modal-langs{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;     
+}
+.modal-lang{
+    width: 25%;
+    padding: 20px;
+}
+.modal-langs--list{
+    width: 50px;
+}
+.lang-name{
+    padding:0 8px;
+    position: absolute;
+    bottom: -1px;
+    transform: scale(0);
+    
+    font-weight: bold;
+}
+.modal-title{
+    font-size: 26px;
+}
+.modal-subtitle{
+    font-size: 16px;
+    margin: 12px 0 24px 0;
+}
+.modal-paragraph{
+    margin-bottom: 20px;
+    line-height: 1.75;
+}
+    /*--Hover Effect */
+    /* Show text, reduce size and brightness */
+.modal-lang:hover{
+    filter: brightness(80%);
+    transform: scale(1.25);
+}
+.modal-lang:hover .lang-name{
+    transform: scale(0.8);
+    transition: all 300ms ease;
+}
+
+    /* Contact Form */
+.modal-contact--title, .modal-contact--subtitle{
+    color: rgb(233, 233, 233);
+}
+
+input, textarea{
+    outline: none;
+    width: 100%;
+    border:3px solid white;
+    background-color: red;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0 0 0 0;
+    height: 40px;
+}  
+textarea{
+    resize: vertical;
+    height: 100px;
+}
+
+
+.form-item--label{
+   padding: 0;
+   font-weight: bold ;
+}
+.form-item{
+    margin: 0 0 16px 0;
+}
+
+.form__submit{
+    background-color: white;
+    border: 3px;
+    border-radius: 12%;
+    padding: 20px 20px;
+    font-size: 40px;
+   
+}
+.form__submit:hover{
+    border:5px solid #f5f3f3;
+    background-color: transparent;
+    color: white;
+    transition: all 300ms ease-out;
+}
+.form__submit:active{
+    border:5px solid rgb(255, 148, 48);
+    background-color: transparent;
+    color: rgb(255, 148, 48);
+    transition: all 900ms ease-in-out ;
+}
+
+
+.modal__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal__overlay--success{
+    background-color: green;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+    /*--Loading animation-- 
+        --Loading Screen when we press Send button 
+        */
+.modal__overlay--loading{
+    background-color: rgb(248, 137, 33);
+
+    font-size:80px ;
+    z-index: -1;
+}
+.contact_form_loading{
+    animation: loader 900ms infinite linear;
+}
+@keyframes loader {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.modal__exit{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #f5f3f3;
+    z-index: 100;
+    font-size: 40px;
+}
+
 
 
 
@@ -110,7 +335,7 @@ section{
     width: 40px;
     height: 40px;
     font-size: 28px;
-    background-color: rgba(255, 0, 0, 0.856);
+    background-color: rgba(255, 0, 0, 0.855);
     color: white;
     
     padding: 6px;
@@ -197,6 +422,118 @@ nav{
     100%{
         transform: translateY(10px);
     }
+}
+
+/* PROJECT  */
+.projectSection-title{
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project__img{
+    width: 100%;
+    transition: all 600ms ease;
+}
+
+
+
+
+
+.project__wrapper{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0 20px 80px 0  rgba(0, 0, 0);
+    overflow: hidden;
+    margin:20px 0 70px 0 ;
+}
+
+.project__wrapper--bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: #242424;
+    opacity: 0;
+    
+}
+.project__description{
+    position: absolute;
+    top: 80%;
+    transform: translateY(100%);
+    left: 20px;
+    max-width: 550px;
+    color: rgb(255, 255, 255) ; 
+    transition:opacity 300ms, transform 450ms ease;
+   
+}
+
+/* Hover Effects on Project's Card */
+/* To diplay Projects Info when we hover over the picture. Texts comes from bottom */
+.project__wrapper:hover .project__description{
+    opacity:1;
+    transform: translateY(-80%);
+}
+/* Makes gray background appear */
+.project__wrapper:hover .project__wrapper--bg{
+    opacity: 0.7;  
+}
+/* Makes image bit larger and blur */
+.project__wrapper:hover .project__img{
+    transform: scale(1.08);
+    filter: blur(2px);
+}
+
+
+
+
+.project_title{
+    font-size: 40px;   
+}
+.Project_langs{
+    font-size: 18px;
+    margin: 4px 0 16px 0;
+}
+.project_description{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.project--links{
+    display: flex;
+}
+.project--link{
+    color:white;
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #242424;
+}
+.footer-row{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-logo{
+    height: 70px;
+    width: 70px;
+    
+}
+.footerSocial--lists{
+    width: 100%;
+    margin: 16px 0 ;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footerCopyrights, .footerSocial--list{
+    color: white;
 }
 
 

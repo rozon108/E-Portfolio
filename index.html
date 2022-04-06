@@ -27,7 +27,7 @@
                         About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">
@@ -42,9 +42,7 @@
                 </li>
                 <li class="nav__link click">
                     <a href="#" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black ">
+                    nav__link--anchor">
                         <i class="fa-solid fa-circle-half-stroke"></i>
                     </a>
                 </li>
@@ -63,8 +61,8 @@
                 </p>
                 <div class="social-list">
                     <a href="#" target="_blank" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="social__link click"><i class="fa-brands fa-github"></i></a>  
-                    <a href="#" class="social__link click"><i class="fa-solid fa-file-lines"></i></a>                 
+                    <a href="#" class="social__link click"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social__link click"><i class="fa-solid fa-file-lines"></i></a>
                 </div>
             </div>
         </header>
@@ -75,9 +73,204 @@
             <div class="scroll__icon click"></div>
         </a>
 
+        <div class="modal">
+            <div class="modal_half modal-aboutMe">
+                <h3 class="modal-title">Here is littel about me</h3>
+                <h4 class="modal-subtitle">FrontEnd Software Engineer</h4>
+                <p class="modal-paragraph">about me my passion,<b class="impHighlight">skills</b> ..
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, doloribus delectus eveniet quos
+                    praesentium, libero dolorum quibusdam qui repudiandae placeat esse commodi sint quaerat eligendi
+                    consequatur? Non similique aut voluptates?
+                </p>
+                <div class="modal-langs">
+                    <figure class="modal-lang">
+                        <img class="modal-langs--list"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="lang-name">HTML</span>
+                    </figure>
+                    <figure class="modal-lang">
+                        <img class="modal-langs--list"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="lang-name">HTML</span>
+                    </figure>
+                    <figure class="modal-lang">
+                        <img class="modal-langs--list"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="lang-name">HTML</span>
+                    </figure>
+                    <figure class="modal-lang">
+                        <img class="modal-langs--list"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="lang-name">HTML</span>
+                    </figure>
+                </div>
+            </div>
 
+            <div class="modal_half modal-contact">
+                <h3 class="modal-title modal-contact--title">Get in touch</h3>
+                <h4 class="modal-subtitle 
+                modal-contact--subtitle">I'm curretly open to new opportunity</h4>
+                <form action="" id="contactForm">
+                    <div class="form-item">
+                        <label class="form-item--label">
+                            Name
+                        </label>
+                        <input class="input" name="user_name" type="text" required>
+                        </input>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-item--label">
+                            E-mail
+                        </label>
+                        <input class="input" name="user_email" type="email" required>
+                        </input>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-item--label">
+                            Message
+                        </label>
+                        <textarea class="input" name="message" type="textarea" required>
+                        </textarea>
+                    </div>
 
+                    <button id="contact__submit" class="form__submit"><i
+                            class="fa-solid fa-paper-plane form-send-btn"></i></button>
+                </form>
+
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas
+                        fa-spinner
+                        contact_form_loading"></i>
+                </div>
+                <div class="modal__overlay
+                    modal__overlay--success">Thanks. Looking forward to speaking with you.
+                </div>
+            </div>
+            <i class="fa-solid fa-xmark click modal__exit"></i>
+        </div>
     </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="projectSection-title">Here are some of my <b class="impHighlight">projects</b> </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project__img">
+                            <!-- below to add blur and animation feature -->
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project_title">E-commerce</h3>
+                                <h4 class="Project_langs">HTML,CSS,JS</h4>
+                                <p class="project_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Eos dignissimos accusantium omnis tempora molestias.
+                                    Facilis nam quas quaerat sed alias enim, ducimus, nemo nesciunt quisquam eligendi,
+                                    magnam possimus harum fugit.
+                                </p>
+                                <div class="project--links">
+                                    <a href="#" class="project--link">
+                                        <i class="fa-brands fa-github-square"></i>
+                                    </a>
+                                    <a href="#" class="project--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project__img">
+                            <!-- below to add blur and animation feature -->
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project_title">E-commerce</h3>
+                                <h4 class="Project_langs">HTML,CSS,JS</h4>
+                                <p class="project_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Eos dignissimos accusantium omnis tempora molestias.
+                                    Facilis nam quas quaerat sed alias enim, ducimus, nemo nesciunt quisquam eligendi,
+                                    magnam possimus harum fugit.
+                                </p>
+                                <div class="project--links">
+                                    <a href="#" class="project--link">
+                                        <i class="fa-brands fa-github-square"></i>
+                                    </a>
+                                    <a href="#" class="project--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project__img">
+                            <!-- below to add blur and animation feature -->
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project_title">E-commerce</h3>
+                                <h4 class="Project_langs">HTML,CSS,JS</h4>
+                                <p class="project_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Eos dignissimos accusantium omnis tempora molestias.
+                                    Facilis nam quas quaerat sed alias enim, ducimus, nemo nesciunt quisquam eligendi,
+                                    magnam possimus harum fugit.
+                                </p>
+                                <div class="project--links">
+                                    <a href="#" class="project--link">
+                                        <i class="fa-brands fa-github-square"></i>
+                                    </a>
+                                    <a href="#" class="project--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-row">
+            <figure><img src="./assets/logo.svg" alt="" class="footer-logo"></figure>
+            <div class="footerSocial--lists">
+                <a href="#" class="
+                footerSocial--list
+                link__hover-effect
+                link__hover-effect--white">
+                    LinkedIn
+                </a>
+                <a href="#" class="
+                footerSocial--list
+                link__hover-effect
+                link__hover-effect--white">
+                    Github
+                </a>
+                <a href="#" class="
+                footerSocial--list 
+                link__hover-effect
+                link__hover-effect--white">
+                    E-mail
+                </a>
+                <a href="#" class="
+                footerSocial--list 
+                link__hover-effect
+                link__hover-effect--white">
+                    Resume
+                </a>
+            </div>
+            <div class="footerCopyrights">Made by Rojan</div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
