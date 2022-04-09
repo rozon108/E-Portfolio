@@ -32,17 +32,15 @@
     TODO:
       
       Integrate EmailJS to recieve emails
- 
- 
- 
- 
- 
- 
- Still to do:
+
+Did:
   
     ~Integrate EmailJS
-    ~other animation feature 
-    ~more ....
+    ~move the images in background
+    
+TO DO:
+
+    ~Make the web page responsive (in desktop, mobile and when we resize)
   
  
  
