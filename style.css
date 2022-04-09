@@ -3,7 +3,7 @@
 
 
 * {
-   
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,6 +25,7 @@ p{
 
 section{
     background-color: #f5f3f3;
+    transition: all 300ms ease;
 }
 
 .title{
@@ -35,7 +36,7 @@ section{
 }
 
 .impHighlight{
-    color: red !important; 
+    color: red !important;
 }
 
 button{
@@ -55,7 +56,7 @@ button{
 
 .click:active{
     transform: scale(0.95);
-    
+
 }
 
     /* Little Line under Text when hovering with bit of animation */
@@ -85,7 +86,6 @@ button{
 }
     /* End of underline animation */
 
-
 /* -- End of Hover Effect -- */
 
 .mail_btn{
@@ -114,6 +114,55 @@ button{
 
 }
 
+/* Hide and Display Body, Nav when opening PopUp */
+.modal--open nav,
+.modal--open header,
+.modal--open .scroll{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms;
+}
+nav, .header, .scroll{
+    opacity: 1;
+    visibility: visible;
+    transition: all 1000ms ;
+}
+
+/* Dark Mode */
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .darkMode-icon,
+.dark-theme .header__para,
+.dark-theme .projectSection-title
+{
+  color: white;
+}
+.dark-theme section {
+  background-color: #242424;
+}
+.dark-theme #personal-logo {
+  filter: none;
+}
+.dark-theme .scroll__icon {
+  border-color: white;
+}
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--black:after {
+  background-color: white;
+}
+.dark-theme .mail_btn {
+  background-color: white;
+  color: #242424;
+}
+.dark-theme footer{
+    background-color: red;
+}
+.dark-theme .modal{
+    box-shadow: 0px 0px 200px 100px rgb(255, 255, 255);
+}
+
 
 
 /* MODAL POP-UP */
@@ -123,53 +172,67 @@ button{
     left:50%;
     transform: translate(-50%,-50%);
     padding: 0px;
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
-    height: 650px;
+    box-shadow: 0px 0px 200px 100px rgb(0, 0, 0);
+    height: 60%;
 
     display: flex;
-    box-shadow: 0px 0px 200px 100px rgb(0, 0, 0);
+    
     border-radius: 24px;
     overflow: hidden;
+    visibility: hidden;
 }
 .modal_half{
-    width: 050%;
-    padding: 40px 60px;  
+    width: 50%;
+    padding: 40px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+
+    transition: all 300ms ease;
 }
 
-
 .modal-aboutMe{
-    background-color: white;  
+    background-color: white;
+    transform: translateX(-120%);
 }
 .modal-contact{
     background-color: red;
     color: white;
+    transform: translateX(120%);
+}
+
+    /* Animations to open the Contact Modal(PopUP) */
+.modal--open .modal-aboutMe,
+.modal--open .modal-contact{
+    transform: translateX(00%);
 }
 
 
 .modal-langs{
-    position: relative;
+   
     display: flex;
-    flex-wrap: wrap;     
+    flex-wrap: wrap;
 }
 .modal-lang{
     width: 25%;
-    padding: 20px;
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
 }
 .modal-langs--list{
-    width: 50px;
+    width: 170%;
 }
 .lang-name{
-    padding:0 8px;
     position: absolute;
-    bottom: -1px;
+    bottom: -4px;
     transform: scale(0);
     
-    font-weight: bold;
 }
 .modal-title{
     font-size: 26px;
@@ -193,6 +256,11 @@ button{
     transition: all 300ms ease;
 }
 
+.modal--open .modal{
+    z-index: 60;
+    
+    visibility: visible;
+}
     /* Contact Form */
 .modal-contact--title, .modal-contact--subtitle{
     color: rgb(233, 233, 233);
@@ -209,7 +277,7 @@ input, textarea{
     border-right: none;
     margin: 0 0 0 0;
     height: 40px;
-}  
+}
 textarea{
     resize: vertical;
     height: 100px;
@@ -221,16 +289,16 @@ textarea{
    font-weight: bold ;
 }
 .form-item{
-    margin: 0 0 16px 0;
+    margin: 5px 0 16px 0;
 }
-
 .form__submit{
     background-color: white;
-    border: 3px;
-    border-radius: 12%;
-    padding: 20px 20px;
+    border: 4.5px white solid;
+    border-radius: 25%;
+    padding: 12px;
     font-size: 40px;
-   
+    position: absolute;
+    right: 50px;
 }
 .form__submit:hover{
     border:5px solid #f5f3f3;
@@ -252,9 +320,10 @@ textarea{
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 .modal__overlay--success{
     background-color: green;
@@ -262,15 +331,18 @@ textarea{
     font-weight: bold;
     text-align: center;
     padding: 20px;
+    
 }
-    /*--Loading animation-- 
-        --Loading Screen when we press Send button 
+.modal__overlay--visible{
+    z-index: 1;
+    display: flex;
+}
+    /*--Loading animation--
+        --Loading Screen when we press Send button
         */
 .modal__overlay--loading{
     background-color: rgb(248, 137, 33);
-
-    font-size:80px ;
-    z-index: -1;
+    font-size:80px ;  
 }
 .contact_form_loading{
     animation: loader 900ms infinite linear;
@@ -284,7 +356,6 @@ textarea{
     }
 }
 
-
 .modal__exit{
     position: absolute;
     top: 20px;
@@ -295,19 +366,13 @@ textarea{
 }
 
 
-
-
-
-
-
-/* 
-  Landing Page 
+/*
+  Landing Page
 */
 
 #landing-page{
     min-height: 100vh;
 }
-
 .header{
     position: absolute;
     top: 50%;
@@ -337,7 +402,7 @@ textarea{
     font-size: 28px;
     background-color: rgba(255, 0, 0, 0.855);
     color: white;
-    
+
     padding: 6px;
     margin-right: 10px;
     border-radius: 50%;
@@ -346,8 +411,8 @@ textarea{
 
 
 
-/* 
-    NAVIGATION BAR 
+/*
+    NAVIGATION BAR
 */
 
 nav{
@@ -365,7 +430,7 @@ nav{
 #personal-logo{
     filter: invert(1);
     width: 50px;
-    height: 50px; 
+    height: 50px;
 }
 
 .nav__link--list{
@@ -430,16 +495,10 @@ nav{
     text-align: center;
     margin-bottom: 20px;
 }
-
 .project__img{
     width: 100%;
     transition: all 600ms ease;
 }
-
-
-
-
-
 .project__wrapper{
     position: relative;
     border-radius: 24px;
@@ -447,7 +506,6 @@ nav{
     overflow: hidden;
     margin:20px 0 70px 0 ;
 }
-
 .project__wrapper--bg{
     position: absolute;
     top: 0;
@@ -457,7 +515,6 @@ nav{
     opacity: 0.7;
     background-color: #242424;
     opacity: 0;
-    
 }
 .project__description{
     position: absolute;
@@ -465,11 +522,9 @@ nav{
     transform: translateY(100%);
     left: 20px;
     max-width: 550px;
-    color: rgb(255, 255, 255) ; 
+    color: rgb(255, 255, 255) ;
     transition:opacity 300ms, transform 450ms ease;
-   
 }
-
 /* Hover Effects on Project's Card */
 /* To diplay Projects Info when we hover over the picture. Texts comes from bottom */
 .project__wrapper:hover .project__description{
@@ -478,19 +533,15 @@ nav{
 }
 /* Makes gray background appear */
 .project__wrapper:hover .project__wrapper--bg{
-    opacity: 0.7;  
+    opacity: 0.7;
 }
 /* Makes image bit larger and blur */
 .project__wrapper:hover .project__img{
     transform: scale(1.08);
     filter: blur(2px);
 }
-
-
-
-
 .project_title{
-    font-size: 40px;   
+    font-size: 40px;
 }
 .Project_langs{
     font-size: 18px;
@@ -508,6 +559,54 @@ nav{
     font-size: 20px;
 }
 
+
+/* Small Icons in background */
+    /*
+    these are used to postion the images/small icon 
+    top: vh
+    left: vw */
+
+.shape {
+    position: fixed;
+  }
+  .shape--0 {
+    top: 15vh;
+    left: 5vw;
+  }
+  .shape--1 {
+    top: 15vh;
+    left: 50vw;
+  }
+  .shape--2 {
+    top: 15vh;
+    left: 80vw;
+  }
+  .shape--3 {
+    top: 50vh;
+    left: 5vw;
+  }
+  .shape--4 {
+    top: 50vh;
+    left: 50vw;
+  }
+  .shape--5 {
+    top: 50vh;
+    left: 80vw;
+  }
+  .shape--6 {
+    top: 80vh;
+    left: 5vw;
+  }
+  .shape--7 {
+    top: 80vh;
+    left: 50vw;
+  }
+  .shape--8 {
+    top: 80vh;
+    left: 80vw;
+  }
+
+
 /* FOOTER */
 footer{
     background-color: #242424;
@@ -521,7 +620,6 @@ footer{
 .footer-logo{
     height: 70px;
     width: 70px;
-    
 }
 .footerSocial--lists{
     width: 100%;
@@ -529,7 +627,6 @@ footer{
     max-width: 500px;
     display: flex;
     justify-content: space-around;
-
 }
 
 .footerCopyrights, .footerSocial--list{
