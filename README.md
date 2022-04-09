@@ -15,11 +15,6 @@
     min-height: 100vh (to display .this element, vh-> viewport height, similarly their is vw, viewport width
     
     
-  Still to do:
-  
-    ~Pop-up window when we click Email-button(to send message)
-    ~other animation feature 
-    ~more ....
   
  <h2>Projects Page</h2>
   ToDo:
@@ -27,9 +22,28 @@
     Create kind of Containers showing Projects
     Image with title, languages used, short descirption
     Hover Effect: Blur image, grayish background colour with texts, links to project, repo ... 
+   
+   Created Project Page, with card like feature, contains image, when hovered image is blured, zoomed and Project Info is displayed
+   
+   <h2>Contact Pop UP</h2>
+   Created the pop up, contains: About me and Contact me Form.
+   Close button(/w z-index(100), to diplay on top of everything)
+   Loading and success message
+    TODO:
+      
+      Integrate EmailJS to recieve emails
  
  
  
+ 
+ 
+ 
+ Still to do:
+  
+    ~Integrate EmailJS
+    ~other animation feature 
+    ~more ....
+  
  
  
  
