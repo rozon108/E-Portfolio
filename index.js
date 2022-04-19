@@ -10,6 +10,8 @@ function contact(event) {
     const success = document.querySelector('.modal__overlay--success');
     loading.classList += " modal__overlay--visible" ;
 
+    
+
     emailjs.sendForm(
         'service_638l3p6',
         'template_2t5063a',
@@ -27,13 +29,24 @@ function contact(event) {
 //for opening and closing Modal(Contact PopUp)
 
 function toggleMenu(){
+    //chnage envelope icon
+    const envelopeIcon = document.querySelector('.envelope');
+    envelopeIcon.classList.toggle('fa-envelope-open-text');
+
+    //actually opening and closing
     if(isModalOpen){
             isModalOpen =false;
            return document.body.classList.remove("modal--open");
+           
     }
     isModalOpen = !isModalOpen;
     document.body.classList += " modal--open";
+ 
+    
+
+   
 }
+
 
 // Dark/Light Mode Toggle
 
@@ -60,7 +73,36 @@ function moveSmallIcons(event){
 
 }
 
+//change ICons
+function changeIcon(icon){
+    icon.classList.toggle('fa-envelope-open-text');
+} 
 
 
+const mailButton = document.querySelector('.envelope');
+const testBtn = document.querySelector('.envv');
+function test(){
+    const testBtn = document.querySelector('.envv');
+    testBtn.style.color='green';
+}
+function test3(){
+    const testBtn = document.querySelector('.envv');
+  
+    testBtn.innerHTML= 'helooo';
+}
+
+function test2(){
+    const testBtn = document.querySelector('.envv');
+    testBtn.classList.toggle('envy');
+
+}
+
+
+function test5(){
+    const testBtn5 = document.querySelector('.envelope2');
+    testBtn5.classList.toggle('fa-envelope-open-text');
+    //testBtn5.classList.remove('fa-envelope-open-text');
+
+}
 
 
