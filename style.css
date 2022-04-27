@@ -150,7 +150,7 @@ nav, .header, .scroll{
   background-color: #242424;
 }
 .dark-theme #personal-logo {
-  filter: none;
+  filter: invert(1);
 }
 .dark-theme .scroll__icon {
   border-color: white;
@@ -440,9 +440,11 @@ nav{
 }
 
 #personal-logo{
-    filter: invert(1);
-    width: 50px;
-    height: 50px;
+    height: 90px;
+    width: 90px;
+    filter: invert(0);
+
+
 }
 
 .nav__link--list{
@@ -577,9 +579,13 @@ nav{
     these are used to postion the images/small icon 
     top: vh
     left: vw */
-
+.header, .row{
+    z-index: 2;
+}
+   
 .shape {
     position: fixed;
+    
   }
   .shape--0 {
     top: 15vh;
@@ -631,6 +637,7 @@ footer{
     flex-direction: column;
 }
 .footer-logo{
+    filter: invert(1) !important;
     height: 70px;
     width: 70px;
 }
