@@ -73,7 +73,7 @@ function moveSmallIcons(event){
 
 }
 
-//change ICons
+//change Email_ICons
 function changeIcon(icon){
     icon.classList.toggle('fa-envelope-open-text');
 } 
